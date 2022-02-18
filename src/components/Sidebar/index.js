@@ -3,7 +3,6 @@ import { Wrapper } from './Sidebar.styles';
 import Brandname from '../BrandName';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BsDownload } from 'react-icons/bs';
-import { NavLink } from 'react-router-dom';
 import Button from '../Buttons';
 import { IconContext } from 'react-icons';
 
