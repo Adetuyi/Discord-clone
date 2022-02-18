@@ -1,0 +1,70 @@
+Background colors
+#ffffff
+#f6f6f6
+#5865f2
+#23272a
+#404eed
+#ed4245
+#ffffff
+#36393f
+#202225
+#2f3136
+#4f545c
+#5865f2
+#3ba55d
+#f26522
+#292b2f
+
+Text colors
+#ffffff
+#000000
+#23272a
+#5865f2
+#0000ee
+#00b0f4
+#000000
+#ffffff
+#8e9297
+#b9bbbe
+#dcddde
+#3ba55d
+#72767d
+#00aff4
+#ed4245
+
+Header 2
+FONT FAMILY
+Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif
+FONT SIZE
+12pxFONT STYLE
+normal
+FONT HEIGHT
+16pxCOLOR
+#8e9297
+Header 3
+FONT FAMILY
+Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif
+FONT SIZE
+16pxFONT STYLE
+normal
+FONT HEIGHT
+20pxCOLOR
+#ffffff
+Header 5
+FONT FAMILY
+Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif
+FONT SIZE
+16pxFONT STYLE
+normal
+FONT HEIGHT
+20pxCOLOR
+#ffffff
+Body
+FONT FAMILY
+Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif
+FONT SIZE
+16pxFONT STYLE
+normal
+FONT HEIGHT
+16pxCOLOR
+#000000
