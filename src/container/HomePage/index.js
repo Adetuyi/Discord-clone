@@ -23,7 +23,6 @@ function HomePage() {
 	return (
 		<>
 			<Navbar setIsOpen={setIsSideBarOpen} />
-
 			<Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen} />
 
 			<HeroSection />

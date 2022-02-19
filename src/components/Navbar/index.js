@@ -11,7 +11,7 @@ import { IconContext } from 'react-icons';
 function Navbar({ setIsOpen }) {
 	const isLoggedIn = useSelector(getIsLoggedIn);
 	return (
-		<Wrapper className='grid'>
+		<Wrapper>
 			<BrandName />
 			<div className='nav-links'>
 				<button>Download</button>

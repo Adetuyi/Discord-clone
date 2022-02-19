@@ -115,7 +115,7 @@ export const Wrapper = styled.section`
 	@media (max-width: 550px) {
 		h1 {
 			font-size: var(--font-size-x-lg);
-			margin-bottom: .6rem;
+			margin-bottom: .9rem;
 		}
 		p{
 			line-height: 1.6;

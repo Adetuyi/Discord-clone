@@ -14,7 +14,7 @@
 	box-sizing: border-box;
 }
 :root {
-	--font-home-btns: clamp(15px, 3.5vw, 18px);
+	--font-home-btns: clamp(16px, 3.5vw, 18px);
 	--font-size-sm: clamp(14px, 2vw, 16px);
 	--font-size: clamp(16px, 2vw, 20px);
 	--font-size-lg: clamp(23px, 4vw, 35px);
@@ -33,6 +33,7 @@
 body {
 	min-height: 100vh;
 	min-width: 300px;
+	position: relative;
 }
 
 a {

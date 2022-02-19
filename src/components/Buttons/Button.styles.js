@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.button`
 	display: block;
-	padding: 0.8em 1.8em;
+	padding: 0.9em 1.8em;
 	border: none;
 	border-radius: 5rem;
 	cursor: pointer;
