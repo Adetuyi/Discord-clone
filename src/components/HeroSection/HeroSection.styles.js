@@ -17,24 +17,23 @@ export const Wrapper = styled.section`
 
 		> * {
 			max-width: 750px;
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	h1 {
 		font-size: 4.2rem;
 		letter-spacing: -2px;
 		text-transform: uppercase;
-		font-family: var(--font-headings);
-		transform: scale(1, 0.6);
+		font-family: var(--font-primary);
+		font-weight: 800;
 	}
 	p {
-		max-width: 700px;
-		font-size: var(--font-size);
 		line-height: 1.8;
-		font-family: var(--font-primary);
+		max-width: 700px;
 	}
 	.hero-btns {
-		margin-top: 1.5rem;
+		margin-top: 1.8rem;
 
 		.desktop {
 			display: flex;
@@ -64,15 +63,17 @@ export const Wrapper = styled.section`
 		img {
 			position: absolute;
 			bottom: 0;
-			height: 340px;
+			left: 0;
 		}
 		.left {
 			left: 50%;
+			height: 360px;
 			transform: translateX(-1000px);
 		}
 		.right {
 			left: 50%;
-			transform: translateX(350px);
+			height: 360px;
+			transform: translateX(320px);
 		}
 	}
 
@@ -86,8 +87,8 @@ export const Wrapper = styled.section`
 		}
 
 		h1 {
+			margin-bottom: .8rem;
 			font-size: var(--font-size-xx-lg);
-			transform: scale(1, 0.8);
 		}
 
 		.hero-btns {
@@ -112,6 +113,13 @@ export const Wrapper = styled.section`
 	}
 
 	@media (max-width: 550px) {
+		h1 {
+			font-size: var(--font-size-x-lg);
+			margin-bottom: .6rem;
+		}
+		p{
+			line-height: 1.6;
+		}
 		.bg-imgs {
 			.left {
 				display: block;

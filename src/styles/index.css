@@ -3,10 +3,9 @@
 @font-face {
 	font-family: 'Whitney';
 	src: url('/public/assets/fonts/whitney-2/whitneybook.otf');
-}
-@font-face {
-	font-family: 'Antique-Olive';
-	src: url('/public/assets/fonts/Antique-Olive/AQBL.ttf');
+
+	font-family: 'Whitney-bold';
+	src: url('/public/assets/fonts/whitney-2/whitneysemibold.otf');
 }
 
 * {
@@ -15,18 +14,20 @@
 	box-sizing: border-box;
 }
 :root {
-	--font-home-btns: clamp(15px, 3.5vw, 20px);
+	--font-home-btns: clamp(15px, 3.5vw, 18px);
 	--font-size-sm: clamp(14px, 2vw, 16px);
 	--font-size: clamp(16px, 2vw, 20px);
-	--font-size-lg: 1.1rem;
-	--font-size-x-lg: clamp(32px, 5vw, 40px);
+	--font-size-lg: clamp(23px, 4vw, 35px);
+	--font-size-x-lg: clamp(32px, 5vw, 45px);
 	--font-size-xx-lg: clamp(43px, 6vw, 78px);
 
 	--brand: #5865f2;
 	--text-link: #00b0f4;
 
-	--font-headings: 'Antique-Olive', sans-serif;
+	--font-headings: 'Whitney-bold', sans-serif;
 	--font-primary: 'Whitney', sans-serif;
+
+	--almost-black: #23272a;
 }
 
 body {
@@ -42,4 +43,9 @@ a {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
+}
+p {
+	font-size: var(--font-size);
+	font-family: var(--font-primary);
+	line-height: 1.6;
 }

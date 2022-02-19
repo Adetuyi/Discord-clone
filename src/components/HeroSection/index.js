@@ -37,12 +37,13 @@ function HeroSection() {
 							}}
 						>
 							<BsDownload />
-							<span>Download from Play Store</span>
+							<span>Download from Google Play</span>
 						</Button>
 					</div>
 				</div>
 			</div>
 			<div className='bg-imgs'>
+				<img src='/assets/svgs/center_bg_landing_header.svg' alt='' />
 				<img src='../../assets/svgs/left_bg_landing_header.svg' alt='' className='left' />
 				<img src='../../assets/svgs/right_bg_landing_header.svg' alt='' className='right' />
 			</div>

@@ -1,6 +1,6 @@
 # Making a Discord clone
 
-This site is available [here](link).
+This site is available [here](https://discord-clone-pp.vercel.app).
 
 ## To be built with
 

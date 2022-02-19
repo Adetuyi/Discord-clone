@@ -40,10 +40,15 @@ export const Wrapper = styled.nav`
 		font-size: 2rem;
 		align-self: end;
 
+		button {
+			padding: 0.8em 1.2em;
+		}
+
 		.bars {
 			margin-left: 1rem;
 			display: none;
 			cursor: pointer;
+			min-width: 25px;
 		}
 	}
 
