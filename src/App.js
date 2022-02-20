@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './container/HomePage';
-import LoginPage from './container/LoginPage';
+import Home from './container/Home';
+import Login from './container/Login';
+import Register from './container/Register';
 
 function App() {
 	const state = useSelector(state => state);
@@ -11,9 +12,9 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path='/' element={<HomePage />} />
-				<Route path='login' element={<LoginPage />} />
-				<Route path='register' element={'register'} />
+				<Route path='/' element={<Home />} />
+				<Route path='login' element={<Login />} />
+				<Route path='register' element={<Register />} />
 				<Route path='dashboard' element={'dashboard'} />
 				<Route path='server' element={'server'}>
 					<Route path='global' element={'global chat'} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '../../components/HeroSection';
 import Navbar from '../../components/Navbar';
-import { FlexBox, GreyWrapper } from './HomePage.styles';
+import { FlexBox, GreyWrapper } from './Home.styles';
 import { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Button from '../../components/Buttons';
@@ -10,7 +10,7 @@ import HomeFooter from '../../components/HomeFooter';
 import { useEffect } from 'react';
 import { observer } from '../../utilities/IntersectionObserver';
 
-function HomePage() {
+function Home() {
 	const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
 	useEffect(() => {
@@ -116,4 +116,4 @@ function HomePage() {
 	);
 }
 
-export default HomePage;
+export default Home;

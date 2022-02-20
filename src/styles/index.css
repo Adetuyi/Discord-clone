@@ -21,25 +21,28 @@
 	--font-size-x-lg: clamp(32px, 5vw, 45px);
 	--font-size-xx-lg: clamp(43px, 6vw, 78px);
 
-	--brand: #5865f2;
-	--text-link: #00b0f4;
-
 	--font-headings: 'Whitney-bold', sans-serif;
 	--font-primary: 'Whitney', sans-serif;
 
+	--brand: #5865f2;
+	--text-link: #00b0f4;
 	--almost-black: #23272a;
+	--darkgrey: #b9bbbe;
+	--links: hsl(197, 100%, 47.8%);
 }
 
 body {
 	min-height: 100vh;
 	min-width: 300px;
 	position: relative;
+	font-family: var(--font-primary);
 }
 
 a {
 	text-decoration: none;
 	width: fit-content;
 	padding: 0.1rem 0.3rem;
+	color: inherit;
 }
 .grid {
 	display: grid;

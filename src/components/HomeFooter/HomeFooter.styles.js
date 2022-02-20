@@ -29,11 +29,28 @@ export const Footer = styled.footer`
 		}
 	}
 
+	.lang {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-family: var(--font-primary);
+		margin-top: 1rem;
+		font-size: 0.9rem;
+
+		img {
+			height: 16px;
+		}
+	}
+
 	.socials {
 		display: flex;
 		align-items: center;
 		gap: 1.7rem;
-		margin-top: 1.2rem;
+		margin-top: 1rem;
+
+		svg {
+			cursor: pointer;
+		}
 	}
 	.links {
 		display: flex;

@@ -13,7 +13,10 @@ const HomeFooter = () => {
 			<section>
 				<header>
 					<h2>Imagine a place</h2>
-					<div></div>
+					<div className='lang'>
+						<img src='/assets/images/usa_flag.png' alt='' />
+						<span>English, USA</span>
+					</div>
 					<div className='socials'>
 						<IconContext.Provider value={{ color: '#fff', size: '1.3rem' }}>
 							<FaTwitter />
