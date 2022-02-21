@@ -40,6 +40,11 @@ export const Wrapper = styled.section`
 			justify-content: center;
 			gap: 2rem;
 			max-width: 700px;
+
+			a{
+				display: block;
+				padding: 0;
+			}
 		}
 		.mobile {
 			display: none;

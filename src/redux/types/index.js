@@ -1,0 +1,6 @@
+const WARNING = 'WARNING';
+const SUCCESS = 'SUCCESS';
+const NEUTRAL = 'NEUTRAL';
+const MODAL = 'MODAL';
+
+export { WARNING, SUCCESS, NEUTRAL, MODAL };

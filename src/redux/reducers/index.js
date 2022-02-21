@@ -1,21 +1,7 @@
-const initState = {
-	isLoggedIn: false,
-	friends: {
-		all: [{ userId: '', userName: '', messages: [], isOnline: false }],
-		requests: [{ userId: '', userName: '' }],
-		blocked: [{ userId: '', userName: '' }],
-	},
-	globalServerMessages: [
-		{ userId: '', userName: '', message: '' },
-		{ userId: '', userName: '', message: '', isMine: true },
-	],
-};
+import { combineReducers } from 'redux';
+import { modalReducer } from './modalReducer';
 
-const rootReducer = (state = initState, action) => {
-	switch (action.type) {
-		default:
-			return state;
-	}
-};
+const rootReducer = combineReducers({ modalReducer });
 
+export { modalReducer };
 export default rootReducer;

@@ -106,7 +106,7 @@ export const Wrapper = styled.div`
 		}
 
 		> span {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 		}
 	}
 	.link {

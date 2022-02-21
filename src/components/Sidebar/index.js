@@ -19,29 +19,47 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 					<section className='grid'>
 						<ul className='side-bar-list'>
 							<li className='active'>Home</li>
-							<li>Download</li>
-							<li>Nitro</li>
-							<li>Safety</li>
-							<li>Mod Academy</li>
-							<li>Support</li>
-							<li>Blog</li>
-							<li>Careers</li>
+							<li className='un'>Download</li>
+							<li className='un'>Nitro</li>
+							<li className='un'>Safety</li>
+							<li className='un'>Mod Academy</li>
+							<li className='un'>Support</li>
+							<li className='un'>Blog</li>
+							<li className='un'>Careers</li>
 						</ul>
 					</section>
 				</section>
 				<div className='footer'>
-					<Button
-						tertiary
-						style={{
-							display: 'flex',
-							gap: '.8rem',
-						}}
-					>
-						<IconContext.Provider value={{ color: '#fff' }}>
-							<BsDownload />
-						</IconContext.Provider>
-						<span>Download for Windows</span>
-					</Button>
+					<div className='desktop'>
+						<Button
+							tertiary
+							style={{
+								display: 'flex',
+								gap: '.8rem',
+							}}
+							className='un'
+						>
+							<IconContext.Provider value={{ color: '#fff' }}>
+								<BsDownload />
+							</IconContext.Provider>
+							<span>Download for Windows</span>
+						</Button>
+					</div>
+					<div className='mobile'>
+						<Button
+							tertiary
+							style={{
+								display: 'flex',
+								gap: '.8rem',
+							}}
+							className='un'
+						>
+							<IconContext.Provider value={{ color: '#fff' }}>
+								<BsDownload />
+							</IconContext.Provider>
+							<span>Download from Google Play</span>
+						</Button>
+					</div>
 				</div>
 			</aside>
 		</Wrapper>

@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Buttons';
 import { Wrapper } from './HeroSection.styles';
 import { BsDownload } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
 	return (
@@ -21,11 +22,14 @@ function HeroSection() {
 								display: 'flex',
 								gap: '.8rem',
 							}}
+							className='un'
 						>
 							<BsDownload />
 							<span>Download for Windows</span>
 						</Button>
-						<Button secondary>Open Discord in your browser</Button>
+						<Link to='login'>
+							<Button secondary>Open Discord in your browser</Button>
+						</Link>
 					</div>
 
 					<div className='mobile'>
@@ -35,6 +39,7 @@ function HeroSection() {
 								display: 'flex',
 								gap: '.8rem',
 							}}
+							className='un'
 						>
 							<BsDownload />
 							<span>Download from Google Play</span>

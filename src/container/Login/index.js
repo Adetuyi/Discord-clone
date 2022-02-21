@@ -29,14 +29,16 @@ function Login() {
 
 					<form>
 						<label htmlFor=''>email or phone number</label>
-						<input type='email' />
+						<input type='email' required />
 
 						<label htmlFor=''>password</label>
-						<input type='password' />
+						<input type='password' required />
 
-						<div className='link'>Forgot your password?</div>
+						<div className='link un'>Forgot your password?</div>
 
-						<button type='submit'>Login</button>
+						<button type='submit' className='un'>
+							Login
+						</button>
 					</form>
 					<div>
 						Need an account?{' '}

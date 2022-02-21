@@ -90,6 +90,7 @@ function Home() {
 									display: 'flex',
 									gap: '.8rem',
 								}}
+								className='un'
 							>
 								<BsDownload />
 								<span>Download for Windows</span>
@@ -102,6 +103,7 @@ function Home() {
 									display: 'flex',
 									gap: '.8rem',
 								}}
+								className='un'
 							>
 								<BsDownload />
 								<span>Download from Google Play</span>

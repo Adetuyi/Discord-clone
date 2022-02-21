@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
 	opacity: 0;
 	position: fixed;
 	inset: 0;
-	z-index: 998;
+	z-index: 200;
 
 	&.active {
 		opacity: 1;
@@ -31,13 +31,14 @@ export const Wrapper = styled.section`
 		right: 0;
 		transform: translateX(100%);
 		transition: transform 0.4s;
-		width: 300px;
+		width: 325px;
+		max-width: 90%;
 		overflow-y: auto;
 		background-color: #fff;
 		border-radius: 0.5rem 0 0 0.5rem;
 		padding: 1.5rem 1rem 1.2rem 1.4rem;
 		color: #000;
-		z-index: 999;
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -91,6 +92,21 @@ export const Wrapper = styled.section`
 		button {
 			font-size: var(--font-size);
 			margin: 0 auto;
+		}
+		.desktop {
+			display: none;
+		}
+		.mobile button {
+			font-size: var(--font-size-sm);
+		}
+
+		@media (hover) {
+			.desktop {
+				display: block;
+			}
+			.mobile {
+				display: none;
+			}
 		}
 	}
 `;

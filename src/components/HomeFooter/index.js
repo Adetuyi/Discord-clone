@@ -18,13 +18,17 @@ const HomeFooter = () => {
 						<span>English, USA</span>
 					</div>
 					<div className='socials'>
-						<IconContext.Provider value={{ color: '#fff', size: '1.3rem' }}>
+						<IconContext.Provider
+							value={{ color: '#fff', size: '1.3rem', className: 'un' }}
+						>
 							<FaTwitter />
 							<BsInstagram />
 							<AiFillFacebook />
 						</IconContext.Provider>
 
-						<IconContext.Provider value={{ color: '#fff', size: '1.7rem' }}>
+						<IconContext.Provider
+							value={{ color: '#fff', size: '1.7rem', className: 'un' }}
+						>
 							<AiFillYoutube />
 						</IconContext.Provider>
 					</div>
@@ -32,44 +36,46 @@ const HomeFooter = () => {
 				<div className='links'>
 					<ul>
 						<header>Product</header>
-						<li>Download</li>
-						<li>Nitro</li>
-						<li>Status</li>
+						<li className='un'>Download</li>
+						<li className='un'>Nitro</li>
+						<li className='un'>Status</li>
 					</ul>
 					<ul>
 						<header>Company</header>
-						<li>About</li>
-						<li>Jobs</li>
-						<li>Branding</li>
-						<li>Newsroom</li>
+						<li className='un'>About</li>
+						<li className='un'>Jobs</li>
+						<li className='un'>Branding</li>
+						<li className='un'>Newsroom</li>
 					</ul>
 					<ul>
 						<header>Resources</header>
-						<li>College</li>
-						<li>Support</li>
-						<li>Safety</li>
-						<li>Blog</li>
-						<li>Feedback</li>
-						<li>Developers</li>
-						<li>StreamKit</li>
+						<li className='un'>College</li>
+						<li className='un'>Support</li>
+						<li className='un'>Safety</li>
+						<li className='un'>Blog</li>
+						<li className='un'>Feedback</li>
+						<li className='un'>Developers</li>
+						<li className='un'>StreamKit</li>
 					</ul>
 					<ul>
 						<header>Policies</header>
-						<li>Terms</li>
-						<li>Privacy</li>
-						<li>Cookie</li>
-						<li>Settings</li>
-						<li>Guidelines</li>
-						<li>Acknowledgements</li>
-						<li>Licenses</li>
-						<li>Moderation</li>
+						<li className='un'>Terms</li>
+						<li className='un'>Privacy</li>
+						<li className='un'>Cookie</li>
+						<li className='un'>Settings</li>
+						<li className='un'>Guidelines</li>
+						<li className='un'>Acknowledgements</li>
+						<li className='un'>Licenses</li>
+						<li className='un'>Moderation</li>
 					</ul>
 				</div>
 			</section>
 			<hr />
 			<div className='footer'>
 				<BrandName />
-				<Button tertiary>Download</Button>
+				<Button tertiary className='un'>
+					Download
+				</Button>
 			</div>
 		</Footer>
 	);

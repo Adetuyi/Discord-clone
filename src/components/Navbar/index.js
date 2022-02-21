@@ -14,12 +14,12 @@ function Navbar({ setIsOpen }) {
 		<Wrapper>
 			<BrandName />
 			<div className='nav-links'>
-				<button>Download</button>
-				<button>Nitro</button>
-				<button>Safety</button>
-				<button>Support</button>
-				<button>Blog</button>
-				<button>Carrers</button>
+				<button className='un'>Download</button>
+				<button className='un'>Nitro</button>
+				<button className='un'>Safety</button>
+				<button className='un'>Support</button>
+				<button className='un'>Blog</button>
+				<button className='un'>Carrers</button>
 			</div>
 			<div className='nav-btns'>
 				{isLoggedIn ? (

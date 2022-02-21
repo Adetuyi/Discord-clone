@@ -53,3 +53,28 @@ p {
 	font-family: var(--font-primary);
 	line-height: 1.6;
 }
+.modal {
+	position: fixed;
+	bottom: 15px;
+	left: 50%;
+	transform: translate(-50%, 30px);
+	opacity: 0;
+	transition: opacity 0.8s, transform 0.8s;
+	width: fit-content;
+	border-left: 5px solid #ffff20;
+	background-color: var(--almost-black);
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+	z-index: 201;
+}
+.modal.active {
+	transform: translate(-50%, 0);
+	opacity: 1;
+}
+.modal.warn {
+	border-left: 5px solid rgb(219, 34, 34);
+}
+.modal.success {
+	border-left: 5px solid rgb(20, 177, 20);
+}

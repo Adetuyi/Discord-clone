@@ -174,12 +174,12 @@ function Register() {
 							</div>
 							<div>
 								I have read and agree to Discord's{' '}
-								<span className='link'>Terms of Service</span> and{' '}
-								<span className='link'>Privacy Policy</span>
+								<span className='link un'>Terms of Service</span> and{' '}
+								<span className='link un'>Privacy Policy</span>
 							</div>
 						</div>
 						<div className='btnParent'>
-							<button type='submit' disabled={isDisabled}>
+							<button type='submit' className='un' disabled={isDisabled}>
 								Continue
 							</button>
 							<div className='warn'>
