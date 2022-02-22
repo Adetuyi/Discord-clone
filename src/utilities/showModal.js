@@ -13,16 +13,34 @@ export const showModal = (modal, mode, msg = defaultMsg) => {
 
 	modal.textContent = msg;
 
+	// If modal is already active, remove then reanimate back in
+	const addClass = classNames => {
+		if (modal.classList.contains('active')) {
+			modal.style.transition = 'none';
+			modal.classList.remove('active');
+
+			setTimeout(() => {
+				modal.style.transition = 'opacity 0.8s, transform 0.8s';
+				modal.className = classNames;
+			}, 100);
+
+			console.log('fired 1');
+		} else {
+			console.log('fired 2');
+			modal.className = classNames;
+		}
+	};
+
 	// Show modal depending on specified mode
 	switch (mode) {
 		case WARNING:
-			modal.className = 'modal active warn';
+			addClass('modal active warn');
 			break;
 		case SUCCESS:
-			modal.className = 'modal active success';
+			addClass('modal active success');
 			break;
 		case NEUTRAL:
-			modal.className = 'modal active';
+			addClass('modal active');
 			break;
 		default:
 			break;
