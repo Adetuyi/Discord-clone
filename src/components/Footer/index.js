@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from './HomeFooter.styles';
+import { Footer } from './Footer.styles';
 import { FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
 import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';

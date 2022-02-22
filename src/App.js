@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './container/Home';
 import Login from './container/Login';
+import NotFound from './container/NotFound';
 import Register from './container/Register';
 import { setModal } from './redux/actions';
 import { getModal } from './redux/selectors';
@@ -50,7 +51,7 @@ function App() {
 						<Route path='global' element={'global chat'} />
 						<Route path=':userId' element={'friendPAge'} />
 					</Route>
-					<Route path='*' element={'404'} />
+					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 

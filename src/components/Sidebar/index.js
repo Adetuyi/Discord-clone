@@ -5,6 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { BsDownload } from 'react-icons/bs';
 import Button from '../Buttons';
 import { IconContext } from 'react-icons';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
 	return (
@@ -18,7 +19,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 					</header>
 					<section className='grid'>
 						<ul className='side-bar-list'>
-							<li className='active'>Home</li>
+							<NavLink to='/'>
+								<li>Home</li>
+							</NavLink>
 							<li className='un'>Download</li>
 							<li className='un'>Nitro</li>
 							<li className='un'>Safety</li>

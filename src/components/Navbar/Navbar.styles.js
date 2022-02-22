@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.nav`
 	max-width: 1260px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 1.5rem 40px;
+	padding: 1rem 40px;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -24,11 +24,15 @@ export const Wrapper = styled.nav`
 			font-weight: bold;
 			background-color: unset;
 			border: none;
-			font-size: 1.05rem;
+			font-size: 1rem;
 			color: #fff;
 			padding: 0.3rem 0.5rem;
 			margin: 0 0.5rem;
 			cursor: pointer;
+
+			:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -50,14 +54,21 @@ export const Wrapper = styled.nav`
 		}
 	}
 
+	${props =>
+		props.secondary &&
+		css`
+			.nav-links button {
+				color: var(--almost-black);
+			}
+		`}
+
 	@media (max-width: 1020px) {
 		.nav-links {
 			display: none;
 		}
 
 		.nav-btns .bars {
-				display: block;
-			}
+			display: block;
 		}
 	}
 

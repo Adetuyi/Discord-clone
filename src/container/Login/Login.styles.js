@@ -135,10 +135,6 @@ export const Wrapper = styled.div`
 			font-size: 1rem;
 		}
 	}
-	.link {
-		color: var(--text-link);
-		cursor: pointer;
-	}
 
 	@media (max-width: 830px) {
 		> div {

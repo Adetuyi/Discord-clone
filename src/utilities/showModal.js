@@ -23,10 +23,7 @@ export const showModal = (modal, mode, msg = defaultMsg) => {
 				modal.style.transition = 'opacity 0.8s, transform 0.8s';
 				modal.className = classNames;
 			}, 100);
-
-			console.log('fired 1');
 		} else {
-			console.log('fired 2');
 			modal.className = classNames;
 		}
 	};

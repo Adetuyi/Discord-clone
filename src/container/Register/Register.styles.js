@@ -109,10 +109,6 @@ export const Wrapper = styled.div`
 			font-size: 0.8rem;
 		}
 	}
-	.link {
-		color: var(--text-link);
-		cursor: pointer;
-	}
 
 	.dob {
 		margin-top: 0.5rem;

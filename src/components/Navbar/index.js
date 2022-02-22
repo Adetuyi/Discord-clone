@@ -8,11 +8,30 @@ import { getIsLoggedIn } from '../../redux/selectors';
 import { VscThreeBars } from 'react-icons/vsc';
 import { IconContext } from 'react-icons';
 
-function Navbar({ setIsOpen }) {
+function Navbar({ setIsOpen, secondary }) {
 	const isLoggedIn = useSelector(getIsLoggedIn);
+
+	const barClr = secondary ? 'var(--almost-black)' : 'white';
+	const brandClr = secondary ? 'var(--almost-black)' : '';
+
+	// Btns conditional color
+	const loginBtn = secondary ? <Button tertiary>Login</Button> : <Button primary>Login</Button>;
+	const openDcBtn = secondary ? (
+		<Button tertiary>Open Discord</Button>
+	) : (
+		<Button primary>Open Discord</Button>
+	);
+
+	// Nav btn conditional btn
+	const navBtn = isLoggedIn ? (
+		<Link to='dashboard'>{openDcBtn}</Link>
+	) : (
+		<Link to='login'>{loginBtn}</Link>
+	);
+
 	return (
-		<Wrapper>
-			<BrandName />
+		<Wrapper secondary={secondary}>
+			<BrandName color={brandClr} />
 			<div className='nav-links'>
 				<button className='un'>Download</button>
 				<button className='un'>Nitro</button>
@@ -22,16 +41,13 @@ function Navbar({ setIsOpen }) {
 				<button className='un'>Carrers</button>
 			</div>
 			<div className='nav-btns'>
-				{isLoggedIn ? (
-					<Link to='dashboard'>
-						<Button primary>Open Discord</Button>
-					</Link>
-				) : (
-					<Link to='login'>
-						<Button primary>Login</Button>
-					</Link>
-				)}
-				<IconContext.Provider value={{ color: 'white', className: 'bars' }}>
+				{navBtn}
+				<IconContext.Provider
+					value={{
+						color: barClr,
+						className: 'bars',
+					}}
+				>
 					<VscThreeBars onClick={() => setIsOpen(true)} />
 				</IconContext.Provider>
 			</div>

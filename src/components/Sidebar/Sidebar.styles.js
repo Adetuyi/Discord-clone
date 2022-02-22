@@ -69,9 +69,8 @@ export const Wrapper = styled.section`
 				list-style: none;
 				padding: 0.5rem 0.5rem 0.5rem 1rem;
 				margin-bottom: 0.5rem;
-				font-size: var(--font-size);
+				font-size: 1rem;
 				cursor: pointer;
-				border-radius: 7px;
 
 				:hover {
 					text-decoration: underline;
@@ -83,6 +82,14 @@ export const Wrapper = styled.section`
 			.active {
 				background: #eee;
 				color: var(--brand);
+				display: block;
+				width: 100%;
+				border-radius: 7px;
+				margin-bottom: 0.5rem;
+
+				li {
+					margin-bottom: 0rem;
+				}
 			}
 		}
 	}
@@ -90,7 +97,7 @@ export const Wrapper = styled.section`
 		margin-top: 1.5rem;
 
 		button {
-			font-size: var(--font-size);
+			font-size: 16px;
 			margin: 0 auto;
 		}
 		.desktop {
@@ -107,6 +114,13 @@ export const Wrapper = styled.section`
 			.mobile {
 				display: none;
 			}
+		}
+	}
+	@media (min-width: 1020px) {
+		&.active {
+			opacity: 0;
+			pointer-events: none;
+			transition: none;
 		}
 	}
 `;

@@ -1,18 +1,14 @@
 import React from 'react';
+import { useEffect } from 'react';
 import HeroSection from '../../components/HeroSection';
-import Navbar from '../../components/Navbar';
 import { FlexBox, GreyWrapper } from './Home.styles';
-import { useState } from 'react';
-import Sidebar from '../../components/Sidebar';
 import Button from '../../components/Buttons';
 import { BsDownload } from 'react-icons/bs';
-import HomeFooter from '../../components/HomeFooter';
-import { useEffect } from 'react';
+import Footer from '../../components/Footer';
 import { observer } from '../../utilities/IntersectionObserver';
+import NavAndSidebar from '../../components/NavAndSidebar';
 
 function Home() {
-	const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-
 	useEffect(() => {
 		const opaques = document.querySelectorAll('.opaque');
 
@@ -22,8 +18,7 @@ function Home() {
 	}, []);
 	return (
 		<>
-			<Navbar setIsOpen={setIsSideBarOpen} />
-			<Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen} />
+			<NavAndSidebar />
 
 			<HeroSection />
 
@@ -113,7 +108,7 @@ function Home() {
 				</div>
 			</GreyWrapper>
 
-			<HomeFooter />
+			<Footer />
 		</>
 	);
 }

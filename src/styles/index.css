@@ -8,11 +8,6 @@
 	src: url('/public/assets/fonts/whitney-2/whitneysemibold.otf');
 }
 
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
 :root {
 	--font-home-btns: clamp(16px, 3.5vw, 18px);
 	--font-size-sm: clamp(14px, 2vw, 16px);
@@ -31,6 +26,12 @@
 	--links: hsl(197, 100%, 47.8%);
 }
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	min-height: 100vh;
 	min-width: 300px;
@@ -44,15 +45,23 @@ a {
 	padding: 0.1rem 0.3rem;
 	color: inherit;
 }
-.grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-}
+
 p {
 	font-size: var(--font-size);
 	font-family: var(--font-primary);
 	line-height: 1.6;
 }
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.link {
+	color: var(--text-link);
+	cursor: pointer;
+}
+
 .modal {
 	position: fixed;
 	bottom: 15px;
