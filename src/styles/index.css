@@ -29,8 +29,12 @@
 	--link-hover: #3e4146;
 	--link-bg: #34373c;
 
+	--channels-clr: #72756c;
+	--a-hover: #dcddde;
+
 	--main-bg: #36393f;
 	--aside-bg: #2f3136;
+	--nav-bg: #202225;
 }
 
 * {
@@ -87,7 +91,26 @@ p {
 li:hover .a,
 .a:hover,
 .a.active {
-	color: #dcddde;
+	color: var(--a-hover);
+}
+
+.remove {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	place-items: center;
+	padding: 0 0.5rem;
+	background-color: var(--link-bg);
+	border-radius: 5px;
+}
+.remove svg {
+	font-size: 1.2rem;
+	fill: var(--channels-clr);
+}
+.remove:hover svg {
+	fill: var(--a-hover);
 }
 
 .modal {
@@ -118,9 +141,48 @@ li:hover .a,
 .modal.success {
 	border-left: 5px solid rgb(20, 177, 20);
 }
+.has-more {
+	position: relative;
+}
+.more-info {
+	display: none;
+	font-size: 0.95rem;
+	width: max-content;
+	max-width: 23ch;
+	z-index: 100;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(100%, -50%);
+	background-color: #18191c;
+	color: #eee;
+	padding: 0.4rem 0.8rem;
+	border-radius: 5px;
+	pointer-events: none;
+}
+.more-info svg {
+	font-size: 1.2rem;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(-11px, -50%);
+	fill: #18191c;
+}
 
-/* @media (max-width: 400px) {
-	.mobile button {
-		gap: 0 !important;
-	}
-} */
+.more-info.down {
+	left: 50%;
+	top: 0;
+	right: unset;
+	transform: translate(-50%, calc(-50% - 23px));
+}
+.more-info.down svg {
+	left: 50%;
+	top: unset;
+	bottom: 0;
+	transform: translate(-50%, 10px);
+}
+
+li:hover .more-info,
+.has-more:hover .more-info {
+	display: block;
+}

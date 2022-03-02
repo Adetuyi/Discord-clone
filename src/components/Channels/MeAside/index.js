@@ -2,14 +2,16 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 
-import { AiOutlinePlus } from 'react-icons/ai';
+import { AiFillCaretDown, AiOutlinePlus } from 'react-icons/ai';
 import { IoMdClose } from 'react-icons/io';
+
 import { nitro_svg, friends_svg } from '../../../utilities/svgs';
 
 import { getFriends } from '../../../redux/selectors/getFriends';
 
-import { Icon, Wrapper } from './MeAside.styles';
+import { Wrapper } from './MeAside.styles';
 import UserDetails from '../UserDetails';
+import { Icon } from '../../StyledComponents';
 
 const MeAside = () => {
 	const friends = useSelector(getFriends);
@@ -42,7 +44,13 @@ const MeAside = () => {
 			</ul>
 			<header>
 				<h3>Direct Messages</h3>
-				<AiOutlinePlus className='un' />
+				<div className='has-more un'>
+					<span className='more-info down'>
+						Create Dm
+						<AiFillCaretDown />
+					</span>
+					<AiOutlinePlus />
+				</div>
 			</header>
 
 			{/* Friend List */}

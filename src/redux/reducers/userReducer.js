@@ -7,6 +7,7 @@ const userStates = {
 		phoneNum: '',
 		profileImg: 'new_line.png',
 		about: '',
+		isOnline: false,
 	},
 	friends: {
 		currentPage: null,
@@ -56,14 +57,21 @@ const userStates = {
 		{
 			id: '1',
 			name: 'Server 1',
-			hasUnreadMsgs: true,
+			unreadMsgs: 84,
 			profileImg: 'new_line.png',
 			channels: [{ name: '', id: '', msgs: [], members: [{ name: '', id: '', role: '' }] }],
 		},
 		{
 			id: '2',
 			name: 'Server 2',
-			hasUnreadMsgs: false,
+			unreadMsgs: 7,
+			profileImg: 'new_line.png',
+			channels: [{ name: '', id: '', msgs: [], members: [{ name: '', id: '', role: '' }] }],
+		},
+		{
+			id: '3',
+			name: 'Server 3',
+			unreadMsgs: 0,
 			profileImg: 'new_line.png',
 			channels: [{ name: '', id: '', msgs: [], members: [{ name: '', id: '', role: '' }] }],
 		},

@@ -23,14 +23,14 @@ export const Wrapper = styled.aside`
 	}
 
 	ul {
-		padding: 0.5rem;
+		padding: 0.5rem 0;
 	}
 
 	li {
 		position: relative;
 		list-style-type: none;
-		font-size: 0.95rem;
 		margin-bottom: 0.2rem;
+		border-radius: 5px;
 		cursor: pointer;
 
 		:hover {
@@ -49,9 +49,8 @@ export const Wrapper = styled.aside`
 		grid-template-columns: 40px 1fr;
 		grid-column-gap: 0.7rem;
 		width: 100%;
-		padding: 0.2rem 0.3rem;
+		padding: 0.3rem;
 		border-radius: 5px;
-		height: 41px;
 		overflow: hidden;
 
 		:hover,
@@ -78,21 +77,6 @@ export const Wrapper = styled.aside`
 			position: relative;
 		}
 	}
-	.remove {
-		display: none;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		top: 0;
-		place-items: center;
-		padding: 0 0.3rem;
-		background-color: var(--link-bg);
-
-		svg {
-			fill: #fff;
-			font-size: 1.2rem;
-		}
-	}
 
 	header {
 		display: flex;
@@ -103,13 +87,17 @@ export const Wrapper = styled.aside`
 		:hover {
 			color: #d7d8d9;
 
-			svg {
+			div > svg {
 				fill: #d7d8d9;
 			}
 		}
 
 		svg {
 			cursor: pointer;
+		}
+
+		h3 {
+			cursor: default;
 		}
 	}
 
@@ -122,36 +110,4 @@ export const Wrapper = styled.aside`
 		position: absolute;
 		bottom: 0;
 	}
-`;
-
-export const Icon = styled.div`
-	position: absolute;
-	bottom: -3px;
-	right: -3px;
-	display: grid;
-	place-items: center;
-	border-radius: 50%;
-	width: 16px;
-	aspect-ratio: 1;
-	background-color: #3a3d43;
-
-	.inner {
-		border-radius: 50%;
-		width: 63%;
-		aspect-ratio: 1;
-		border: 3px solid #39a05a;
-		background-color: #39a05a;
-	}
-
-	${props =>
-		!props.isOnline &&
-		css`
-			.inner {
-				border-radius: 50%;
-				width: 63%;
-				aspect-ratio: 1;
-				border: 3px solid #6d7885;
-				background-color: #3a3d43;
-			}
-		`}
 `;

@@ -4,7 +4,7 @@ export const Nav = styled.nav`
 	--t-duration: 0.4s;
 
 	min-width: 72px;
-	background-color: #202225;
+	background-color: var(--nav-bg);
 
 	.home {
 		:hover a,
@@ -16,7 +16,7 @@ export const Nav = styled.nav`
 				transition: fill var(--t-duration);
 			}
 		}
-		svg {
+		a svg {
 			fill: #e5e6e7;
 			font-size: 1.8rem;
 		}
@@ -49,22 +49,34 @@ export const Nav = styled.nav`
 			height: 15px;
 			left: 0px;
 		}
-
-		.name {
-			display: block;
-		}
 	}
+	a {
+		position: relative;
+	}
+
+	.msgs {
+		color: #fff;
+		position: absolute;
+		bottom: -4px;
+		right: -4px;
+		border-radius: 100px;
+		font-size: 0.7rem;
+		font-weight: bolder;
+		padding: 0 0.3rem 0.15rem;
+		border: 4px solid var(--nav-bg);
+		background-color: #ed4245;
+	}
+
 	a,
 	button {
 		display: grid;
 		place-items: center;
 		text-align: center;
 		margin: 0 auto;
-		padding: 0.5rem;
 		border-radius: 50%;
 		border: none;
-		width: 50px;
-		height: 50px;
+		width: 48px;
+		height: 48px;
 		background-color: #4f545c;
 		background-position: center;
 		background-size: cover;
@@ -105,31 +117,7 @@ export const Nav = styled.nav`
 			left: 0px;
 		}
 	}
-	.name {
-		display: none;
-		font-size: 0.95rem;
-		width: max-content;
-		max-width: 23ch;
-		z-index: 100;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translate(100%, -50%);
-		background-color: #18191c;
-		color: #eee;
-		padding: 0.4rem 0.8rem;
-		border-radius: 5px;
-		pointer-events: none;
 
-		svg {
-			font-size: 1.2rem;
-			position: absolute;
-			left: 0;
-			top: 50%;
-			transform: translate(-9.5px, -50%);
-			fill: #18191c;
-		}
-	}
 	.hr {
 		border-top: 1px solid #4f545c;
 		width: 70%;

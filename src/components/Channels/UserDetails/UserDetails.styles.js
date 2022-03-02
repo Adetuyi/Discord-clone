@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 	align-items: center;
 	gap: 0.5rem;
 	background-color: #292b2f;
-	padding: 0.5rem;
+	padding: 0.3rem 0.5rem;
 
 	.img {
 		width: 39px;
@@ -19,14 +19,43 @@ export const Wrapper = styled.div`
 		border-radius: 50%;
 		position: relative;
 	}
+	.name {
+		margin-left: 0.2rem;
 
-	.icon {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		border-radius: 50%;
-		background-color: green;
-		width: 11px;
-		aspect-ratio: 1;
+		i {
+			color: var(--darkgrey);
+		}
+
+		h5 {
+			color: #fff;
+			font-size: 0.9rem;
+		}
+		p {
+			color: var(--darkgrey);
+			font-size: 0.78rem;
+		}
+	}
+
+	.icons {
+		display: flex;
+		flex: 1;
+		justify-content: end;
+		gap: 0.1rem;
+
+		> div {
+			padding: 0.3rem 0.3rem 0.2rem;
+			border-radius: 5px;
+			cursor: pointer;
+
+			:hover {
+				background-color: var(--link-bg);
+			}
+		}
+		svg {
+			color: #b9bbbe;
+		}
+		.strikethrough {
+			color: hsl(359, 82.6%, 59.4%);
+		}
 	}
 `;

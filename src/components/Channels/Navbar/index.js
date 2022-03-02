@@ -20,7 +20,7 @@ const CNavbar = () => {
 						<FaDiscord />
 					</NavLink>
 					<div className='border'></div>
-					<div className='name'>
+					<div className='more-info'>
 						Home
 						<AiFillCaretLeft />
 					</div>
@@ -28,16 +28,20 @@ const CNavbar = () => {
 
 				<div className='hr'></div>
 				{/* Servers */}
-				{servers.map(({ id, name, profileImg, hasUnreadMsgs }) => (
+				{servers.map(({ id, name, profileImg, unreadMsgs }) => (
 					<li key={id}>
 						<NavLink
 							to={`/channels/${id}`}
 							style={{
 								backgroundImage: `url(/assets/images/${profileImg})`,
 							}}
-						></NavLink>
-						<div className={`border ${hasUnreadMsgs ? 'unread' : ''}`}></div>
-						<div className='name'>
+						>
+							{unreadMsgs > 0 ? (
+								<div className='msgs'>{unreadMsgs > 99 ? '99+' : unreadMsgs}</div>
+							) : null}
+						</NavLink>
+						<div className={`border ${unreadMsgs > 0 ? 'unread' : ''}`}></div>
+						<div className='more-info'>
 							{name}
 							<AiFillCaretLeft />
 						</div>
@@ -46,10 +50,10 @@ const CNavbar = () => {
 
 				{/* Add server */}
 				<li>
-					<button className='un test'>
+					<button className='un'>
 						<AiOutlinePlus />
 					</button>
-					<div className='name'>
+					<div className='more-info'>
 						Add a server
 						<AiFillCaretLeft />
 					</div>
@@ -61,7 +65,7 @@ const CNavbar = () => {
 						<FaCompass />
 					</button>
 					<div className='border'></div>
-					<div className='name'>
+					<div className='more-info'>
 						Explore Public Servers
 						<AiFillCaretLeft />
 					</div>
@@ -75,9 +79,9 @@ const CNavbar = () => {
 						<FiDownload />
 					</button>
 					<div className='border'></div>
-					<div className='name'>
+					<div className='more-info'>
 						Downloaded Apps
-						<AiOutlinePlus />
+						<AiFillCaretLeft />
 					</div>
 				</li>
 			</ul>
