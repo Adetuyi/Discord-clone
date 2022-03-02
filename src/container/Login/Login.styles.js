@@ -79,7 +79,6 @@ export const Wrapper = styled.div`
 		padding: 1.3rem 0.5rem;
 		font-size: 0.95rem;
 		color: #eee;
-		letter-spacing: 0.3px;
 
 		:focus {
 			outline: none;

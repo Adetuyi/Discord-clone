@@ -1,1 +1,1 @@
-export const getModal = state => state.modalReducer.modalRef;
+export const getModal = state => state.modal.modalRef;

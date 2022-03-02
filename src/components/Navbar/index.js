@@ -1,12 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
+
 import BrandName from '../BrandName';
 import Button from '../Buttons';
+
 import { Wrapper } from './Navbar.styles';
+
 import { getIsLoggedIn } from '../../redux/selectors';
+
 import { VscThreeBars } from 'react-icons/vsc';
-import { IconContext } from 'react-icons';
 
 function Navbar({ setIsOpen, secondary }) {
 	const isLoggedIn = useSelector(getIsLoggedIn);
@@ -24,7 +28,7 @@ function Navbar({ setIsOpen, secondary }) {
 
 	// Nav btn conditional btn
 	const navBtn = isLoggedIn ? (
-		<Link to='dashboard'>{openDcBtn}</Link>
+		<Link to='channels/@me'>{openDcBtn}</Link>
 	) : (
 		<Link to='login'>{loginBtn}</Link>
 	);

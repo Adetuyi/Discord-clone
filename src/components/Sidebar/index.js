@@ -1,11 +1,14 @@
 import React from 'react';
-import { Wrapper } from './Sidebar.styles';
-import Brandname from '../BrandName';
-import { AiOutlineClose } from 'react-icons/ai';
-import { BsDownload } from 'react-icons/bs';
-import Button from '../Buttons';
 import { IconContext } from 'react-icons';
 import { NavLink } from 'react-router-dom';
+
+import { Wrapper } from './Sidebar.styles';
+
+import Button from '../Buttons';
+import Brandname from '../BrandName';
+
+import { AiOutlineClose } from 'react-icons/ai';
+import { BsDownload } from 'react-icons/bs';
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
 	return (

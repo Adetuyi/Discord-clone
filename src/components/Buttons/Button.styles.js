@@ -59,4 +59,9 @@ export const Wrapper = styled.button`
 				background-color: rgba(250, 250, 250, 0.1);
 			}
 		`}
+
+	@media (max-width: 400px) {
+		gap: 0.5rem !important;
+		padding: 0.9em 1.2em;
+	}
 `;

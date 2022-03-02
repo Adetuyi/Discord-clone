@@ -11,6 +11,17 @@ const userStates = {
 	],
 };
 
+const msgStates = {
+	globalServerMessages: [
+		{ userId: '', userName: '', message: '' },
+		{ userId: '', userName: '', message: '', isMine: true },
+	],
+	friends: [
+		{ userId: '', userName: '', message: '' },
+		{ userId: '', userName: '', message: '', isMine: true },
+	],
+};
+
 const domStates = {
 	modalRef: '',
 };
@@ -18,4 +29,5 @@ const domStates = {
 export const initState = {
 	...domStates,
 	...userStates,
+	...msgStates,
 };

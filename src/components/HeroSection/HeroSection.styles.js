@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
 	padding: 0 2rem;
-	height: clamp(710px, 100vh, 900px);
+	height: clamp(700px, 100vh, 750px);
 	position: relative;
 	display: grid;
 	place-items: center;

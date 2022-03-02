@@ -1,14 +1,21 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+
 import HeroSection from '../../components/HeroSection';
-import { FlexBox, GreyWrapper } from './Home.styles';
 import Button from '../../components/Buttons';
-import { BsDownload } from 'react-icons/bs';
 import Footer from '../../components/Footer';
-import { observer } from '../../utilities/IntersectionObserver';
 import NavAndSidebar from '../../components/NavAndSidebar';
 
+import { FlexBox, GreyWrapper } from './Home.styles';
+
+import { BsDownload } from 'react-icons/bs';
+
+import { observer } from '../../utilities/IntersectionObserver';
+
+import { useModal } from '../../hooks/useModalWarning';
+
 function Home() {
+	useModal();
+
 	useEffect(() => {
 		const opaques = document.querySelectorAll('.opaque');
 

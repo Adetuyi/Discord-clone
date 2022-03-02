@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
+
 import { FaDiscord } from 'react-icons/fa';
+
 import { Wrapper } from './BrandName.styles';
 
 function BrandName({ color }) {

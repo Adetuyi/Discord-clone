@@ -1,4 +1,5 @@
 import { NEUTRAL, SUCCESS, WARNING } from '../redux/types';
+
 let timer;
 const defaultMsg = 'This feature is unavailable';
 

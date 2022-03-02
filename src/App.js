@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -7,10 +6,9 @@ import Home from './container/Home';
 import Login from './container/Login';
 import NotFound from './container/NotFound';
 import Register from './container/Register';
+import Me from './container/Channels/Me';
+
 import { setModal } from './redux/actions';
-import { getModal } from './redux/selectors';
-import { NEUTRAL } from './redux/types';
-import { showModal } from './utilities/showModal';
 
 function App() {
 	const state = useSelector(state => state);
@@ -18,26 +16,15 @@ function App() {
 
 	const modalRef = useRef();
 	const dispatch = useDispatch();
-	const modal = useSelector(getModal);
 
-	const handleUnavailableClick = useCallback(() => {
-		showModal(modal, NEUTRAL);
-	}, [modal]);
-
-	// Set modal in redux store
 	useEffect(() => {
+		// Set modal in redux store
 		dispatch(setModal(modalRef.current));
-
-		// Show modal for unavialble features
-		const unavailableFeatures = document.querySelectorAll('.un');
-		unavailableFeatures.forEach(feature =>
-			feature.addEventListener('click', handleUnavailableClick)
-		);
 
 		// Prevent default for forms
 		const forms = document.querySelectorAll('form');
 		forms.forEach(form => form.addEventListener('submit', e => e.preventDefault()));
-	}, [dispatch, handleUnavailableClick]);
+	}, [dispatch]);
 
 	return (
 		<>
@@ -46,17 +33,17 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='login' element={<Login />} />
 					<Route path='register' element={<Register />} />
-					<Route path='dashboard' element={'dashboard'} />
-					<Route path='server' element={'server'}>
-						<Route path='global' element={'global chat'} />
-						<Route path=':userId' element={'friendPAge'} />
+					<Route path='channels/@me' element={<Me />}>
+						<Route path=':userId' element={'Friend Page'} />
 					</Route>
+					<Route path='channels/global' element={'Global chat'} />
+					<Route path='channels/:serverId' element={'Server Page'} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 
 			<p className='modal' ref={modalRef}>
-				Hi, there
+				Hi there
 			</p>
 		</>
 	);

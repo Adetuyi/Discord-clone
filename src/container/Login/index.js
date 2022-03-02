@@ -1,18 +1,25 @@
 import React, { useEffect, useRef } from 'react';
-import { Wrapper } from './Login.styles';
-import BrandName from '../../components/BrandName';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
 import { getIsLoggedIn } from '../../redux/selectors';
+
+import { Wrapper } from './Login.styles';
+
+import BrandName from '../../components/BrandName';
+
+import { useModal } from '../../hooks/useModalWarning';
 
 function Login() {
 	const login = useRef();
 	const isLoggedIn = useSelector(getIsLoggedIn);
 	const navigate = useNavigate();
+	useModal();
 
 	useEffect(() => {
+		//Redirect if loggedin
 		if (isLoggedIn) {
-			navigate('/dashboard');
+			navigate('/channels/@me');
 		}
 
 		login.current.classList.add('active');

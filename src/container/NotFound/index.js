@@ -1,9 +1,15 @@
 import React from 'react';
+
 import { Wrapper } from './NotFound.styles';
+
 import NavAndSidebar from '../../components/NavAndSidebar';
 import Footer from '../../components/Footer';
 
+import { useModal } from '../../hooks/useModalWarning';
+
 const NotFound = () => {
+	useModal();
+
 	return (
 		<>
 			<NavAndSidebar secondary />

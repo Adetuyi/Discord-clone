@@ -1,9 +1,12 @@
 import React from 'react';
+import { IconContext } from 'react-icons';
+
 import { Footer } from './Footer.styles';
+
 import { FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
 import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
-import { IconContext } from 'react-icons';
+
 import BrandName from '../BrandName';
 import Button from '../Buttons';
 

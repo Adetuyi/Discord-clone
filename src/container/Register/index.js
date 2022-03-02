@@ -1,12 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Wrapper } from './Register.styles';
-import BrandName from '../../components/BrandName';
 import { Link, useNavigate } from 'react-router-dom';
-import { AiOutlineCheck, AiFillCaretDown } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
+
+import { Wrapper } from './Register.styles';
+
+import BrandName from '../../components/BrandName';
+
+import { AiOutlineCheck, AiFillCaretDown } from 'react-icons/ai';
+
 import { getIsLoggedIn } from '../../redux/selectors';
 
+import { useModal } from '../../hooks/useModalWarning';
+
 function Register() {
+	useModal();
+
 	const login = useRef();
 	const navigate = useNavigate();
 
