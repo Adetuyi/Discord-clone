@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './container/Home';
-import Login from './container/Login';
-import NotFound from './container/NotFound';
-import Register from './container/Register';
-import Me from './container/Channels/Me';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
+import Register from './pages/Register';
+import Me from './pages/Channels/Me';
 
 import { setModal } from './redux/actions';
 

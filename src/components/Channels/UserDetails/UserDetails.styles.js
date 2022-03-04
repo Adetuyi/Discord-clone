@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	position: absolute;
+	position: sticky;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: flex;
 	align-items: center;
+	align-self: end;
 	gap: 0.5rem;
 	background-color: #292b2f;
 	padding: 0.3rem 0.5rem;

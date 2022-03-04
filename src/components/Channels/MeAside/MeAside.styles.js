@@ -1,6 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.aside`
+	display: grid;
+
 	.top {
 		display: grid;
 		place-items: center;
@@ -104,10 +106,5 @@ export const Wrapper = styled.aside`
 	h3 {
 		font-size: 0.8rem;
 		text-transform: uppercase;
-	}
-
-	.user-details {
-		position: absolute;
-		bottom: 0;
 	}
 `;

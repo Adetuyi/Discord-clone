@@ -6,4 +6,11 @@ This site is available [here](https://discord-clone-pp.vercel.app).
 
 ### `React and Firebase`
 
-**Still a work in progress !!!**
+## Goal
+
+-   Users should be able to login
+-   Users should be able to chat
+-   Chat should be in real time
+
+**Work in progress !!!**
+**Currently on hold !**

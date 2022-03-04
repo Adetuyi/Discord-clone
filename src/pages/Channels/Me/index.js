@@ -8,7 +8,7 @@ import { useModal } from '../../../hooks/useModalWarning';
 
 import { friends_svg } from '../../../utilities/svgs';
 
-import { Wrapper } from '../Channels.style';
+import { Wrapper } from '../../../components/StyledComponents/Channels.style';
 import { Main } from './Me.styles';
 
 const Me = () => {

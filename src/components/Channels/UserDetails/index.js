@@ -27,7 +27,7 @@ const UserDetails = () => {
 			</div>
 			<div className='name'>
 				<h5>
-					{details.name.length > 12 ? (
+					{details.name.length > 9 ? (
 						<>
 							{details.name.slice(0, 9)}
 							<i>...</i>

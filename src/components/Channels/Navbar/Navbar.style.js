@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+	/* overflow-y: auto; */
 	--t-duration: 0.4s;
 
 	min-width: 72px;

@@ -146,7 +146,7 @@ li:hover .a,
 }
 .more-info {
 	display: none;
-	font-size: 0.95rem;
+	font-size: 0.83rem;
 	width: max-content;
 	max-width: 23ch;
 	z-index: 100;
